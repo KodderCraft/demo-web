@@ -1,4 +1,5 @@
 import logo from "./logo_tranp.png";
+import libra from "./libra.png";
 import { useState } from "react";
 
     const link_nav= [
@@ -44,7 +45,7 @@ import { useState } from "react";
            },            
     ]
 const Navbar = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const menu_mobil = () =>{
         setOpen (!open)
@@ -52,11 +53,13 @@ const Navbar = () => {
     
 
   return (
-        <nav className=" fixed h-auto  w-full  flex justify-between items-center py-3 font-medium font-ubuntu px-8 md:px-25 lg:px-45 xl:px-60 bg-azul-100/97 backdrop-blur-xs">
+        <nav className=" fixed z-100 top-0 left-0  h-auto  w-full  flex justify-between items-center py-3 font-medium font-ubuntu px-8 md:px-25 lg:px-45 xl:px-60 bg-azul-100/97 backdrop-blur-xs">
         
         {/* menu para escritorio */}
 
-        <img  src={logo} alt="logo"  className=" h-[60px] w-auto transition-all duration-300  inline-block hover:scale-105  select-none"/>
+        
+        <img  src={logo} alt="logo"  className=" scale-200 h-[60px] w-auto transition-all duration-300   hover:scale-210  select-none"/>
+       
 
             <ul className=" gap-3 md:gap-10 lg:gap-15 hidden sm:flex " >
                 {link_nav.map((datos) => (<li key={datos.id}><a /*target="__blank"*/ href={datos.link} 
@@ -69,9 +72,9 @@ const Navbar = () => {
             </button>
         
         {/* menu mobil  */}
-        <div className={` z-0 absolute top-[100%] right-0  w-full h-screen flex justify-end transition-colors  ${open? "bg-transparent": "bg-azul-100/15 cursor-pointer"} ` } onClick={()=>setOpen(true)}>
-            <div onClick={(e) => e.stopPropagation()} className={ `z-10 cursor-default absolute  flex sm:hidden flex-col justify-between  bg-azul-100/90  h-[88vh] w-3xs transition-all duration-300   ${open ? ("left-[-350px] ") : (" left-[0] ")}`} >
-            
+    <div className={` z-0 absolute top-[100%] right-0  w-full h-screen flex justify-end transition-colors  ${open? "bg-transparent": "bg-azul-100/35 sm:bg-transparent cursor-pointer"} ` } onClick={()=>setOpen(true)}>
+        <div onClick={(e) => e.stopPropagation()} className={ `z-10 cursor-default absolute  flex sm:hidden flex-col justify-items-center gap-[60px] bg-azul-100/90  h-screen w-3xs transition-all duration-300   ${open ? ("left-[-350px] ") : (" left-[0] ")}`} >
+            {/* otras paginas */}
             <ul>
                 {
                     link_nav.map( (datos) => (
@@ -82,6 +85,8 @@ const Navbar = () => {
                 }
                 
             </ul>
+            
+            {/* redes sociales */}
             <ul className="flex justify-around ">
                 {
                     inco_nav.map(({id, icono, link}) => (
@@ -93,6 +98,7 @@ const Navbar = () => {
                     )
                 }
             </ul>
+            <img src={libra} alt="justicia - equilibrio" className="fil  w-[70px] mx-auto"/>
             </div>
         </div>
         
