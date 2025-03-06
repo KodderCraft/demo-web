@@ -53,12 +53,12 @@ const Navbar = () => {
     
 
   return (
-        <nav className=" fixed z-100 top-0 left-0  h-auto  w-full  flex justify-between items-center py-3 font-medium font-ubuntu px-8 md:px-25 lg:px-45 xl:px-60 bg-azul-100/97 backdrop-blur-xs">
+        <nav className="fixed z-2  h-[50px] md:h-[80px]  top-0 left-0   w-full  flex justify-between items-center py-[5px] sm:py-[10px] font-medium font-ubuntu px-8 md:px-25 lg:px-45 xl:px-60 bg-azul-100/85 transition-colors duration-200  hover:bg-azul-100">
         
         {/* menu para escritorio */}
 
         
-        <img  src={logo} alt="logo"  className=" scale-200 h-[60px] w-auto transition-all duration-300   hover:scale-210  select-none"/>
+        <img  src={logo} alt="logo"  className=" scale-200  h-auto  w-[75px] transition-all duration-300   hover:scale-210  select-none"/>
        
 
             <ul className=" gap-3 md:gap-10 lg:gap-15 hidden sm:flex " >
@@ -72,8 +72,8 @@ const Navbar = () => {
             </button>
         
         {/* menu mobil  */}
-    <div className={` z-0 absolute top-[100%] right-0  w-full h-screen flex justify-end transition-colors  ${open? "bg-transparent": "bg-azul-100/35 sm:bg-transparent cursor-pointer"} ` } onClick={()=>setOpen(true)}>
-        <div onClick={(e) => e.stopPropagation()} className={ `z-10 cursor-default absolute  flex sm:hidden flex-col justify-items-center gap-[60px] bg-azul-100/90  h-screen w-3xs transition-all duration-300   ${open ? ("left-[-350px] ") : (" left-[0] ")}`} >
+    <div className={` absolute top-[100%] left-0   h-screen  justify-end transition-all duration-300 ${open? "bg-transparent ": "bg-azul-100/35 cursor-pointer flex sm:hidden w-screen"} ` } onClick={()=>setOpen(true)}>
+        <div onClick={(e) => e.stopPropagation()} className={ ` cursor-default absolute  flex sm:hidden flex-col justify-items-center gap-[60px] bg-azul-100/90  h-screen w-3xs  transition-all duration-300   ${open ? ("left-[-400px] transition-all duration-300 ") : ("left-[0] transition-all duration-300   ")}`} >
             {/* otras paginas */}
             <ul>
                 {
