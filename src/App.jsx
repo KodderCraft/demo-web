@@ -1,6 +1,6 @@
-import Navbar from "./Componentes/Navbar/Navbar"
-import Hero from "./Componentes/Hero/Hero"
-import Informacion from "./Componentes/Informacion/Informacion"
+import Navbar from "./Componentes/Navbar/Navbar.jsx"
+import Hero from "./Componentes/Hero/Hero.jsx"
+import Informacion from "./Componentes/Informacion/Informacion.jsx"
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     < >
       <Navbar></Navbar>
       <Hero></Hero>
-      <Informacion></Informacion>
+      <Informacion ></Informacion>
     </>
   )
 }

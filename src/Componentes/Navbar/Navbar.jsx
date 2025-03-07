@@ -53,7 +53,7 @@ const Navbar = () => {
     
 
   return (
-        <nav className="fixed z-2  h-[50px] md:h-[80px]  top-0 left-0   w-full  flex justify-between items-center py-[5px] sm:py-[10px] font-medium font-ubuntu px-8 md:px-25 lg:px-45 xl:px-60 bg-azul-100/85 transition-colors duration-200  hover:bg-azul-100">
+        <nav className="fixed z-2  h-[50px] md:h-[80px]  top-0 left-0   w-full  flex justify-between items-center py-[5px] sm:py-[10px] font-medium font-ubuntu px-8 md:px-25 lg:px-45 xl:px-60 bg-azul-100 transition-colors duration-200  hover:bg-azul-100">
         
         {/* menu para escritorio */}
 
@@ -68,7 +68,7 @@ const Navbar = () => {
             </ul>  
          
          {/* BOTON menu para mobil */}
-        <button onClick={menu_mobil} className="sm:hidden scale-y-120 text-[40px]  text-amber-50   cursor-pointer " >{open ? (<i class="bi bi-list  transition-all duration-400"></i>) : (<i className="bi bi-x "></i>)}
+        <button onClick={menu_mobil} className="sm:hidden scale-y-120 text-[40px]  text-amber-50   cursor-pointer " >{open ? (<i className="bi bi-list  transition-all duration-400"></i>) : (<i className="bi bi-x "></i>)}
             </button>
         
         {/* menu mobil  */}

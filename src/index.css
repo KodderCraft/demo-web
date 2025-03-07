@@ -21,7 +21,9 @@ body{
   --color-hoverazul : oklch(0.7 0.12 235);
 }
 
+
 body{
-    background-color: #f1f1f1;
-    position: relative;
+    background-color: transparent;
+
    }
+   
