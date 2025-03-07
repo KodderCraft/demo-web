@@ -115,8 +115,14 @@ const Informacion = () => {
         <Swiper
           slidesPerView={1}
           spaceBetween={20}
-        //   pagination={{ clickable: false }}
-          navigation
+            pagination={{     clickable: true,  
+              dynamicBullets: true,  
+
+               }}
+            direction="horizontal" 
+          // navigation
+          grabCursor={true}
+          loop={true}
           autoplay={{
             delay: 2500,  
             disableOnInteraction: false,
@@ -134,7 +140,7 @@ const Informacion = () => {
 
           {servicios.map((servicio) => (
             <SwiperSlide key={servicio.id}>
-              <li className="m-4 mx-12  bg-azul-100 p-5 rounded-3xl text-white shadow-lg flex flex-col justify-between items-center transition-all duration-300 hover:scale-105 hover:bg-blue-900 h-[400px] ">
+              <li className="my-9 mx-12 cursor-auto  bg-azul-100 p-5 rounded-3xl text-white shadow-lg flex flex-col justify-between items-center transition-all duration-300 hover:scale-105 hover:bg-blue-900 h-[400px] ">
                 
                 <div className="w-full h-40 overflow-hidden rounded-xl">
                   <img src={servicio.imagen} alt={servicio.servicio} className="w-full h-full object-cover" />
